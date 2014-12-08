@@ -37,58 +37,73 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# mm: brew install ringojs
+# mm: brew install narwhal
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+# mm: brew install vim --override-system-vi
+# mm: brew install homebrew/dupes/grep
+# mm: brew install homebrew/dupes/screen
+# mm: brew install homebrew/php/php55 --with-gmp
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
+# mm: brew install bfg
+# mm: brew install binutils
+# mm: brew install binwalk
+# mm: brew install cifer
+# mm: brew install dex2jar
+# mm: brew install dns2tcp
+# mm: brew install fcrackzip
+# mm: brew install foremost
+# mm: brew install hashpump
+# mm: brew install hydra
+# mm: brew install john
+# mm: brew install knock
+# mm: brew install nmap
+# mm: brew install pngcheck
+# mm: brew install socat
+# mm: brew install sqlmap
+# mm: brew install tcpflow
+# mm: brew install tcpreplay
+# mm: brew install tcptrace
+# mm: brew install ucspi-tcp # `tcpserver` etc.
+# mm: brew install xpdf
 brew install xz
 
 # Install other useful binaries.
-brew install ack
+# mm: brew install ack
 #brew install exiv2
-brew install git
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rhino
-brew install tree
-brew install webkit2png
-brew install zopfli
+# mm: brew install git
+# mm: brew install imagemagick --with-webp
+# mm: brew install lua
+# mm: brew install lynx
+# mm: brew install p7zip
+# mm: brew install pigz
+# mm: brew install pv
+# mm: brew install rename
+# mm: brew install rhino
+# mm: brew install tree
+# mm: brew install webkit2png
+# mm: brew install zopfli
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
-brew install node
+# mm: brew install node
+
+# mm : additionals
+brew install rabbitmq
+brew install redis
+brew install postgresql
+brew install mongodb
+brew install haproxy
+brew install openldap
+brew install nginx
+brew install siege
+
+# dotnet on windows
+brew tap aspnet/k
+brew install kvm
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
