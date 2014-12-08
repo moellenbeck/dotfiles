@@ -1,106 +1,107 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" Example Vim configuration.
+" Copy or symlink to ~/.vimrc or ~/_vimrc.
 
-" Make Vim more useful
-set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
-" Enhance command-line completion
-set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-" Optimize for fast terminal connections
-set ttyfast
-" Add the g flag to search/replace by default
-set gdefault
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set nocompatible                  " Must come first because it changes other options.
 
-" Don’t create backups when editing files in certain directories
-set backupskip=/tmp/*,/private/tmp/*
+silent! call pathogen#runtime_append_all_bundles()
 
-" Respect modeline in files
-set modeline
-set modelines=4
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-" Enable line numbers
-set number
-" Enable syntax highlighting
-syntax on
-" Highlight current line
-set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
-" Highlight dynamically as pattern is typed
-set incsearch
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-" Disable error bells
-set noerrorbells
-" Don’t reset cursor to start of line when moving around.
-set nostartofline
-" Show the cursor position
-set ruler
-" Don’t show the intro message when starting Vim
-set shortmess=atI
-" Show the current mode
-set showmode
-" Show the filename in the window titlebar
-set title
-" Show the (partial) command as it’s being typed
-set showcmd
-" Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
+syntax enable                     " Turn on syntax highlighting.
+filetype plugin indent on         " Turn on file type detection.
 
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+runtime macros/matchit.vim        " Load the matchit plugin.
 
-" Automatic commands
-if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	" Treat .md files as Markdown
-	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
+
+set backspace=indent,eol,start    " Intuitive backspacing.
+
+set hidden                        " Handle multiple buffers better.
+
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+
+set ignorecase                    " Case-insensitive searching.
+set smartcase                     " But case-sensitive if expression contains a capital letter.
+
+set number                        " Show line numbers.
+set ruler                         " Show cursor position.
+
+set incsearch                     " Highlight matches as you type.
+set hlsearch                      " Highlight matches.
+
+set wrap                          " Turn on line wrapping.
+set scrolloff=3                   " Show 3 lines of context around the cursor.
+
+set title                         " Set the terminal's title
+
+set noerrorbells                  " Disable all error bells.  (We enable visualbell though)
+set novisualbell                  " No beeping.
+set noeb vb t_vb=
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set directory=/Users/moellenbeck/vim_swap  " Keep swap files in one location
+
+" UNCOMMENT TO USE
+set tabstop=2                    " Global tab width.
+set shiftwidth=2                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
+
+set laststatus=2                  " Show the status line all the time
+" Useful status information at bottom of screen
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=%t%(\ [%n%M]%)%(\ %H%R%W%)\ %(%c-%v,\ %l\ of\ %L,\ (%o)\ %P\ 0x%B\ (%b)%)
+
+" Or use vividchalk or topfunky-light
+" colorscheme vividchalk
+" colorscheme blackboard
+" colorscheme jellybeans
+" colorscheme railscasts2
+" colorscheme railscasts
+colorscheme ir_black
+" colorscheme rootwater
+"
+let mapleader = ","
+let g:mapleader = ","
+
+" buffer map
+map <C-n> :bn<cr>
+map <C-p> :bp<cr>
+
+" go next window
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+
+" Tab mappings.
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tm :tabmove
+
+
+" coffeescript config
+let coffee_compile_on_save = 1
+vmap <leader>c <esc>:'<,'>:CoffeeCompile<CR>
+map <leader>c :CoffeeCompile<CR>
+
+" Controversial...swap colon and semicolon for easier commands
+"nnoremap ; :
+"nnoremap : ;
+
+"vnoremap ; :
+"vnoremap : ;
+
+" Automatic fold settings for specific files. Uncomment to use.
+" autocmd FileType ruby setlocal foldmethod=syntax
+" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"
+au BufRead,BufNewFile Capfile set filetype=ruby
+
