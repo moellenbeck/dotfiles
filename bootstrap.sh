@@ -22,7 +22,7 @@ fi;
 unset doIt;
 
 # install nvm
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
 
 # install oh my zsh
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+curl -L http://install.ohmyz.sh | sh
