@@ -26,3 +26,6 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
 
 # install oh my zsh
 curl -L http://install.ohmyz.sh | sh
+
+ git config --global user.name "Martin Moellenbeck"
+ git config --global user.email "martin.moellenbeck@5minds.de"
