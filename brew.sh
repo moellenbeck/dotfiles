@@ -63,10 +63,10 @@ brew install wget --with-iri
 # mm: brew install pngcheck
 # mm: brew install socat
 # mm: brew install sqlmap
-# mm: brew install tcpflow
-# mm: brew install tcpreplay
-# mm: brew install tcptrace
-# mm: brew install ucspi-tcp # `tcpserver` etc.
+brew install tcpflow
+brew install tcpreplay
+brew install tcptrace
+brew install ucspi-tcp # `tcpserver` etc.
 # mm: brew install xpdf
 brew install xz
 
