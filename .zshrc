@@ -54,4 +54,4 @@ ssh-add ~/.ssh/huf/backend-mq-agent-core 2> /dev/null
 # osx spezific to use 32 python version
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 
-[[ -s "/usr/local/share/zsh/site-functions/git-flow-completion.zsh"]] && source "/usr/local/share/zsh/site-functions/git-flow-completion.zsh"
+[[ -s "/usr/local/share/zsh/site-functions/git-flow-completion.zsh" ]] && source "/usr/local/share/zsh/site-functions/git-flow-completion.zsh"
