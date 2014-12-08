@@ -30,7 +30,7 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow capistrano ruby rails rake rvm coffee node npm screen osx sublime)
+plugins=(git git-flow coffee node npm screen osx sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,3 +54,4 @@ ssh-add ~/.ssh/huf/backend-mq-agent-core 2> /dev/null
 # osx spezific to use 32 python version
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 
+[[ -s "/usr/local/share/zsh/site-functions/git-flow-completion.zsh"]] && source "/usr/local/share/zsh/site-functions/git-flow-completion.zsh"

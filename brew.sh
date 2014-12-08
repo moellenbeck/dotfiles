@@ -99,6 +99,7 @@ brew install haproxy
 brew install openldap
 brew install nginx
 brew install siege
+brew install git-flow
 
 # dotnet on windows
 brew tap aspnet/k
