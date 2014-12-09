@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
@@ -24,7 +24,7 @@
 	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"line_padding_bottom": 5,
+	"line_padding_bottom": 0,
 	"match_brackets": true,
 	"match_brackets_angle": true,
 	"remember_open_files": false,
