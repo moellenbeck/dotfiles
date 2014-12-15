@@ -92,9 +92,19 @@ brew install xz
 
 # mm : additionals
 brew install rabbitmq
+
 brew install redis
+ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+
 brew install postgresql
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
 brew install mongodb
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+
+brew info mysql
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+
 brew install haproxy
 brew install openldap
 brew install nginx

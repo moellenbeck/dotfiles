@@ -6,6 +6,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias cls="clear"
+
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
@@ -139,3 +141,19 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+## alias for development
+alias start_rabbitmq="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist"
+alias stop_rabbitmq="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist"
+
+alias start_mongodb="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
+alias stop_mongodb="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
+
+alias start_redis="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+alias start_mongodb="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+
+alias start_mysql="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias stop_mysql="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+
+alias start_pg="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias stop_pg="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
