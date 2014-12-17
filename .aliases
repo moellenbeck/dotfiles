@@ -150,7 +150,7 @@ alias start_mongodb="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb
 alias stop_mongodb="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
 
 alias start_redis="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
-alias start_mongodb="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+alias stop_redis="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
 
 alias start_mysql="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias stop_mysql="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"

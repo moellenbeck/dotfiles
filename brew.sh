@@ -106,6 +106,8 @@ brew info mysql
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 brew install haproxy
+brew tap homebrew/dupes
+
 brew install openldap
 brew install nginx
 brew install siege
