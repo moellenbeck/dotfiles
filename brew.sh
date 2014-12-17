@@ -114,6 +114,7 @@ brew install git-flow
 # dotnet on windows
 brew tap aspnet/k
 brew install kvm
+cp init/kvm.sh /usr/local/bin/
 
 
 # Remove outdated versions from the cellar.

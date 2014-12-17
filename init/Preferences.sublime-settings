@@ -24,6 +24,10 @@
 	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+    "Vintage"
+  ],
 	"line_padding_bottom": 0,
 	"match_brackets": true,
 	"match_brackets_angle": true,
