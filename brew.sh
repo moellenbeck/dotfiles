@@ -115,6 +115,9 @@ brew install git-flow
 brew install docker
 brew install boot2docker
 
+# cordova (android)
+brew install ant
+
 # dotnet on windows
 brew tap aspnet/k
 brew install kvm
