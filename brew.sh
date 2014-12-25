@@ -112,6 +112,8 @@ brew install openldap
 brew install nginx
 brew install siege
 brew install git-flow
+brew install docker
+brew install boot2docker
 
 # dotnet on windows
 brew tap aspnet/k
