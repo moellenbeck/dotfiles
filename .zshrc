@@ -91,4 +91,8 @@ export KVM_DIR="/usr/local/Cellar/kvm/1.0.0-beta1"
 
 [ -s "$KVM_DIR/bin/kvm.sh" ] && source "$KVM_DIR/bin/kvm.sh" # this loads kvm
 
+ANDROID_HOME="/Users/moellenbeck/Library/Developer/Xamarin/android-sdk-macosx"
+export PATH="${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools"
+
+
 
