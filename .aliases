@@ -159,6 +159,7 @@ alias start_pg="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.p
 alias stop_pg="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
 ## docker
-start_boot2docker="boot2docker start"
-stop_boot2docker="boot2docker stop"
+alias init_docker="source ~/.docker_init"
+alias start_boot2docker="boot2docker start"
+alias stop_boot2docker="boot2docker stop"
 
