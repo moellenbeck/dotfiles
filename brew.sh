@@ -114,6 +114,7 @@ brew install siege
 brew install git-flow
 brew install docker
 brew install boot2docker
+boot2docker init
 
 # cordova (android)
 brew install ant
