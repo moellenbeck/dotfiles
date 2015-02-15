@@ -95,5 +95,8 @@ export KVM_DIR="/usr/local/Cellar/kvm/1.0.0-beta1"
 ANDROID_HOME="/Users/moellenbeck/Library/Developer/Xamarin/android-sdk-macosx"
 export PATH="${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools"
 
+# load the autoenv if avaiable (load .env if go to a folder)
+[ -s /usr/local/opt/autoenv/activate.sh && source /usr/local/opt/autoenv/activate.sh ]
+
 
 

@@ -69,6 +69,7 @@ brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
 # mm: brew install xpdf
 brew install xz
+brew install autoenv
 
 # Install other useful binaries.
 # mm: brew install ack
