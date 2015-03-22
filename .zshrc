@@ -88,7 +88,7 @@ export NVM_DIR="/Users/moellenbeck/.nvm"
 # mono hinzufügen
 export MONO_GAC_PREFIX="/usr/local"
 
-export KVM_DIR="/usr/local/Cellar/kvm/1.0.0-beta1"
+export KVM_DIR="/usr/local/Cellar/kvm/1.0.0-beta3"
 
 [ -s "$KVM_DIR/bin/kvm.sh" ] && source "$KVM_DIR/bin/kvm.sh" # this loads kvm
 
@@ -96,7 +96,7 @@ ANDROID_HOME="/Users/moellenbeck/Library/Developer/Xamarin/android-sdk-macosx"
 export PATH="${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools"
 
 # load the autoenv if avaiable (load .env if go to a folder)
-[ -s /usr/local/opt/autoenv/activate.sh && source /usr/local/opt/autoenv/activate.sh ]
+[ -s /usr/local/opt/autoenv/activate.sh ] && source /usr/local/opt/autoenv/activate.sh
 
 
 

@@ -121,6 +121,7 @@ boot2docker init
 brew install ant
 
 # dotnet on windows
+brew untap aspnet/k
 brew tap aspnet/k
 brew install kvm
 cp init/kvm.sh /usr/local/bin/
